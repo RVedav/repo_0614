@@ -1,0 +1,7 @@
+val jdbcDF = spark.read
+  .format("jdbc")
+  .option("url", "jdbc:mysql://localhost:3306/mydatabase")
+  .option("dbtable", "mytable")
+  .option("user", "user")
+  .option("password", "mypassword")
+  .load()
